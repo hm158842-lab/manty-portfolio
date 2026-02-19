@@ -126,7 +126,7 @@
             box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
         }
 
-        /* [업데이트] 프로필 사진 스타일 */
+        /* 프로필 사진 스타일 */
         .hero-image-box {
             flex: 1;
             height: 500px;
@@ -137,12 +137,11 @@
         }
 
         .hero-image-box img {
-            width: 80%; /* 이미지 크기 조절 */
+            width: 80%; 
             height: auto;
             max-height: 500px;
             object-fit: contain;
             border-radius: 20px;
-            /* 그림자 효과로 입체감 주기 */
             filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.15));
             transition: transform 0.3s;
         }
@@ -150,7 +149,6 @@
         .hero-image-box img:hover {
             transform: scale(1.02);
         }
-
 
         /* 공통 섹션 스타일 */
         .section {
@@ -160,12 +158,19 @@
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .section-title span {
              color: var(--main-color);
+        }
+        
+        .section-desc {
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
         }
 
         /* 경력 섹션 */
@@ -225,7 +230,6 @@
             margin-bottom: 20px;
         }
 
-        /* [NEW] 강사 연혁 리스트 스타일 */
         .history-list {
             list-style: none;
             margin-top: 10px;
@@ -258,6 +262,32 @@
         .badge-past {
             background-color: #eee;
             color: #777;
+        }
+
+        /* [NEW] 비디오 섹션 스타일 */
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: #000;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 유지 */
+            height: 0;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* 학습 리포트 섹션 스타일 */
@@ -308,7 +338,6 @@
             font-size: 1.2rem;
         }
 
-        /* 샘플 보기 버튼 스타일 */
         .report-btn {
             display: inline-block;
             margin-top: 10px;
@@ -334,7 +363,6 @@
             margin-bottom: 5px;
         }
 
-        /* 리포트 이미지 플레이스홀더 */
         .report-image-placeholder {
             flex: 1.2;
             height: 400px;
@@ -350,7 +378,6 @@
             position: relative;
         }
         
-        /* 장식용 가짜 차트 */
         .fake-chart {
             width: 60%;
             height: 10px;
@@ -442,7 +469,7 @@
             <ul>
                 <li><a href="#about">소개</a></li>
                 <li><a href="#career">경력</a></li>
-                <li><a href="#report">리포트</a></li>
+                <li><a href="#video">영상</a></li> <li><a href="#report">리포트</a></li>
                 <li><a href="#contact">문의</a></li>
             </ul>
         </nav>
@@ -510,6 +537,18 @@
         </div>
     </section>
 
+    <section class="section" id="video">
+        <h2 class="section-title">Class <span>Preview</span></h2>
+        <p class="section-desc">만티쌤의 실제 수업 분위기와 명쾌한 해설 강의를 확인해보세요.</p>
+        
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://youtu.be/Mn-18sNewkk" title="만티쌤 수학 강의 맛보기" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                </div>
+        </div>
+    </section>
+
     <section class="section report-section" id="report">
         <h2 class="section-title">Premium <span>Learning Report</span></h2>
         <div class="report-container">
@@ -542,7 +581,7 @@
         </div>
     </section>
 
-    <footer id="contact">
+     <footer id="contact">
         <h3>Contact Manty</h3>
         <p>카카오톡 ID: orr_man_t </p>
         <p>&copy; 2026 만티수학. All rights reserved.</p>
