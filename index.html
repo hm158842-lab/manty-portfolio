@@ -264,6 +264,11 @@
             color: #777;
         }
 
+        /* [NEW] 자체 교재 섹션 스타일 */
+        .textbook-section {
+            background-color: var(--bg-gray);
+        }
+
         /* 비디오 섹션 스타일 */
         .video-wrapper {
             max-width: 900px;
@@ -469,6 +474,7 @@
             <ul>
                 <li><a href="#about">소개</a></li>
                 <li><a href="#career">경력</a></li>
+                <li><a href="#textbook">교재</a></li>
                 <li><a href="#video">영상</a></li>
                 <li><a href="#report">리포트</a></li>
                 <li><a href="#contact">문의</a></li>
@@ -535,15 +541,27 @@
                 <h3>자체 개발 솔루션</h3>
                 <p>시중 교재의 한계를 넘어섭니다.<br>직접 코딩하여 개발한 웹 기반 도구로 학생 개개인에게 꼭 필요한 맞춤 문제를 제공합니다.</p>
             </div>
+            </div>
+    </section>
 
-            <div class="card">
-                <span class="tag">Textbook</span>
-                <h3>자체 제작 시험대비 교재</h3>
-                <img src="꼭대기2.jpg" alt="꼭대기 교재" style="width: 100%; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <section class="section textbook-section" id="textbook">
+        <h2 class="section-title">Signature <span>Textbook</span></h2>
+        <div class="report-container">
+            <div style="flex: 1; text-align: center;">
+                <img src="textbook.jpg" alt="꼭대기 교재" style="max-width: 85%; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
+            </div>
+            
+            <div class="report-text">
+                <h3>대구지역 기출 완벽 분석<br><span class="highlight-red">'꼭대기'</span></h3>
                 <p>
-                    <b>'꼭대기(꼭 풀어야 할 대구지역 기출문제)'</b><br>
-                    대구 지역 학교들의 기출문제를 완벽하게 분석하고 선별하여 제작한 내신 완벽 대비 교재입니다.
+                    오직 만티쌤의 수강생만을 위해 직접 분석하고 제작한 <b>시험대비 전용 교재</b>입니다. 
+                    시중 교재로는 완벽히 대비할 수 없는 학교별 내신 특성을 그대로 담았습니다.
                 </p>
+                <ul class="report-features">
+                    <li>대구 지역 주요 학교 최신 기출문제 완벽 반영</li>
+                    <li>출제 빈도가 높은 핵심 유형 집중 공략</li>
+                    <li>'꼭 풀어야 할 대구지역 기출문제' 100% 선별</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -590,7 +608,7 @@
             </div>
         </div>
     </section>
-
+    
     <footer id="contact">
         <h3>Contact Manty</h3>
         <p>카카오톡 ID: orr_man_t </p>
